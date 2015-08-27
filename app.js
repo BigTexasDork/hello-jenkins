@@ -8,8 +8,8 @@ app.get('/', function (req, res) {
   res.send('hello world from jenkins!');
 });
 
-app.get('/version/', function (req, res) {
-  res.send(props.get('version'));
+app.get('/version', function (req, res) {
+  res.send('version: ' + props.get('version'));
 });
  
 app.listen(process.env.PORT || 5000);
